@@ -1,17 +1,16 @@
 function showRating(stars) {
-let rating = "";
+  let rating = "";
 
-for (let i = 0; i < Math.floor(stars); ++i) {
-    rating += "*"
+  for (let i = 0; i < Math.floor(stars); ++i) {
+    rating += "*";
     if (i !== Math.floor(stars) - 1) {
-        rating += " "
+      rating += " ";
     }
+  }
+  if (!Number.isInteger(stars)) {
+    rating += " .";
+  }
+  return rating;
 }
-if (!Number.isInteger(stars)) {
-    rating += " ."
-}
-return rating
 
-}
-
-console.log(showRating(4))
+console.log(showRating(4));
